@@ -99,11 +99,9 @@
           $(".detail").text(newDetail);
         };
 
+        $(document).on('click', '.restart-button', function() {
         $(this).toggleClass('start-button').toggleClass('restart-button').text("もう一度占う！")
       });
-
-      $(document).on('click', '.restart-button', function() {
-        $(this).toggleClass('start-button').toggleClass('restart-button').text("もう一度占う！")
       });
 
       $(document).on('click', '.restart-button', function() {
