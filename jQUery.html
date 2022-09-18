@@ -97,17 +97,20 @@
           $(".result").css("display","block");
           $(".stars").text(newStar);
           $(".detail").text(newDetail);
-          $(".start-button").toggleClass(function(){
-          $(".start-button").text("もう一度占う！");
-          $(".start-button").click(function(){
-            $(".result").fadeOut(".div");
+        };
 
-            $(".start-button").text("運勢を占う！");
-          })
-        });
-        }
-        });
-	});
+        $(this).toggleClass('start-button').toggleClass('restart-button').text("もう一度占う！")
+      });
+
+      $(document).on('click', '.restart-button', function() {
+        $(this).toggleClass('start-button').toggleClass('restart-button').text("もう一度占う！")
+      });
+
+      $(document).on('click', '.restart-button', function() {
+          $(this).toggleClass('start-button').toggleClass('restart-button').text("運勢を占う！")
+          $(".result").css("display,none");
+      });
+	   });
     </script>
   </body>
 </html>
